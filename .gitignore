@@ -1,0 +1,26 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Environment
+.env
+venv/
+ENV/
+env/
+.venv/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints
+
+# Logs and system files
+*.log
+.DS_Store
+
+# Model and TensorFlow files
+*.pb
+*.tfrecord
+checkpoint/
+exported-models/
+Tensorflow/workspace/models/my_ssd_mobnet/checkpoint/
+Tensorflow/workspace/models/my_ssd_mobnet/exported-models/
