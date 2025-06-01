@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Language Detection</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("{{ url_for('static', filename='sign.jpg') }}");
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            color: white; /* Text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Colored Box for Content */
+        .content-box {
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            padding: 30px;
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+            max-width: 600px;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem; /* Font size */
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 15px 30px; /* Button size */
+            font-size: 1.2rem; /* Font size */
+            background: #ff3b2f; /* Button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin: 10px;
+        }
+
+        button:hover {
+            background: #ff6f61; /* Hover color */
+        }
+    </style>
+</head>
+<body>
+    <!-- Debugging: Check if the image is loaded -->
+    <script>
+        const body = document.querySelector('body');
+        const imageUrl = "{{ url_for('static', filename='sign.jpg') }}";
+        const img = new Image();
+        img.src = imageUrl;
+        img.onload = () => {
+            console.log("Image loaded successfully:", imageUrl);
+        };
+        img.onerror = () => {
+            console.error("Failed to load image:", imageUrl);
+            body.style.backgroundColor = "black"; // Fallback background color
+        };
+    </script>
+
+    <!-- Content Box -->
+    <div class="content-box">
+        <h1>Sign Language to Text Converter</h1>
+        <button onclick="location.href='/video_detection'">Real-time Video Detection</button>
+        <button onclick="location.href='/image_detection'">Image Detection</button>
+    </div>
+</body>
+</html>

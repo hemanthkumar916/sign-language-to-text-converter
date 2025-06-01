@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>good luck.7aa09289-033a-11f0-9c45-744ca177d208.jpg</filename>
+	<path>C:\Users\khema\RealTimeObjectDetection-main\Tensorflow\workspace\images\good luck.7aa09289-033a-11f0-9c45-744ca177d208.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>good luck</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>53</xmin>
+			<ymin>168</ymin>
+			<xmax>343</xmax>
+			<ymax>436</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>hope.b7826596-0263-11f0-b789-744ca177d208.jpg</filename>
+	<path>C:\Users\khema\RealTimeObjectDetection-main\Tensorflow\workspace\images\hope.b7826596-0263-11f0-b789-744ca177d208.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>hope</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>364</xmin>
+			<ymin>154</ymin>
+			<xmax>563</xmax>
+			<ymax>459</ymax>
+		</bndbox>
+	</object>
+</annotation>

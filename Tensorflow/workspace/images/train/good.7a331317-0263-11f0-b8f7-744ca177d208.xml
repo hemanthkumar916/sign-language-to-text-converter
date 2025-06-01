@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>good.7a331317-0263-11f0-b8f7-744ca177d208.jpg</filename>
+	<path>C:\Users\khema\RealTimeObjectDetection-main\Tensorflow\workspace\images\good.7a331317-0263-11f0-b8f7-744ca177d208.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>good</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>162</xmin>
+			<ymin>273</ymin>
+			<xmax>392</xmax>
+			<ymax>480</ymax>
+		</bndbox>
+	</object>
+</annotation>

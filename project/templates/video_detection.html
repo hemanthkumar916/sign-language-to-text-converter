@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Video Detection</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .main-container {
+            display: flex;
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .video-container {
+            flex: 1;
+            min-width: 0;
+            max-width: 700px;
+        }
+
+        .chat-container {
+            width: 500px;  /* Increased from 350px */
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #video-feed {
+            width: 100%;
+            max-height: 500px;  /* Reduced from 600px */
+            border: 5px solid #ff6f61;
+            border-radius: 10px;
+            display: block;
+            object-fit: contain;  /* Ensures video maintains aspect ratio */
+        }
+
+        #chat-box {
+            flex-grow: 1;
+            border: 2px solid #ff6f61;
+            border-radius: 10px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            overflow-y: auto;
+            margin-bottom: 20px;
+            min-height: 400px;
+            height: 500px;  /* Fixed height for better control */
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        button:hover {
+            background: #ff3b2f;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 2px solid #ff6f61;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .language-selector label {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Real-Time Video Detection</h1>
+    
+    <div class="main-container">
+        <!-- Left side - Video Feed -->
+        <div class="video-container">
+            <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Video Feed">
+            <div class="controls">
+                <button id="detect-button">Detect</button>
+                <button id="pause-button">Pause</button>
+                <button id="clear-button">Clear Chat</button>
+                <button onclick="location.href='/stop_video'">Stop Detection</button>
+            </div>
+        </div>
+
+        <!-- Right side - Chat Box -->
+        <div class="chat-container">
+            <div class="language-selector">
+                <label for="language-select">Language:</label>
+                <select id="language-select">
+                    <option value="E">English</option>
+                    <option value="T">Telugu</option>
+                    <option value="H">Hindi</option>
+                </select>
+            </div>
+            <div id="chat-box">
+                <p>Detected signs will appear here...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const detectButton = document.getElementById('detect-button');
+        const pauseButton = document.getElementById('pause-button');
+        const clearButton = document.getElementById('clear-button');
+        const chatBox = document.getElementById('chat-box');
+        const languageSelect = document.getElementById('language-select');
+
+        // Function to update the chat box with detected signs
+        function updateChatBox(message) {
+            const p = document.createElement('p');
+            p.textContent = message;
+            chatBox.appendChild(p);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        // Fetch detected signs from the server every second
+        setInterval(async () => {
+            try {
+                const response = await fetch('/get_detected_sign');
+                const data = await response.json();
+                if (data.sign) {
+                    updateChatBox(`Detected Sign: ${data.sign}`);
+                }
+            } catch (error) {
+                console.error('Error fetching detected sign:', error);
+            }
+        }, 1000);
+
+        // Start detection
+        detectButton.addEventListener('click', async () => {
+            await fetch('/start_detection');
+        });
+
+        // Pause detection
+        pauseButton.addEventListener('click', async () => {
+            await fetch('/pause_detection');
+        });
+
+        // Clear chat box
+        clearButton.addEventListener('click', () => {
+            chatBox.innerHTML = '<p>Detected signs will appear here...</p>';
+        });
+
+        // Handle language selection
+        languageSelect.addEventListener('change', async (event) => {
+            const selectedLanguage = event.target.value;
+            await fetch('/set_language', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ language: selectedLanguage }),
+            });
+        });
+    </script>
+</body>
+</html>

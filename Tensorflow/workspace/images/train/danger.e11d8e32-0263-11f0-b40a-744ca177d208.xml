@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>danger.e11d8e32-0263-11f0-b40a-744ca177d208.jpg</filename>
+	<path>C:\Users\khema\RealTimeObjectDetection-main\Tensorflow\workspace\images\danger.e11d8e32-0263-11f0-b40a-744ca177d208.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>danger</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>185</xmin>
+			<ymin>277</ymin>
+			<xmax>474</xmax>
+			<ymax>462</ymax>
+		</bndbox>
+	</object>
+</annotation>

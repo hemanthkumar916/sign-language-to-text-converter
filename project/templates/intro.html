@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("{{ url_for('static', filename='IMG_20241112_212235.jpg') }}");
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            color: white; /* Text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Logo Slider */
+        .logo-slider {
+            position: fixed;
+            top: 0;
+            left: -100%; /* Start off-screen */
+            width: 100%; /* Full width */
+            height: 100px; /* Adjust height as needed */
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 0;
+            animation: slideIn 2s forwards;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-slider img {
+            width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 100px; /* Adjust max height as needed */
+        }
+
+        @keyframes slideIn {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 0;
+            }
+        }
+
+        /* Colored Box for Content */
+        .content-box {
+            background: rgba(0,0, 0, 0.5); /* Semi-transparent orange background */
+            padding: 30px;
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+            max-width: 600px;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem; /* Font size */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem; /* Font size */
+            margin: 15px 0;
+        }
+
+        h2 {
+            font-size: 2rem; /* Font size */
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 15px 30px; /* Button size */
+            font-size: 1.2rem; /* Font size */
+            background: #ff3b2f; /* Button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #ff6f61; /* Hover color */
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo Slider -->
+    <div class="logo-slider">
+        <img src="{{ url_for('static', filename='Screenshot 2025-03-21 152101.png') }}" alt="Vignan's Institute Logo">
+    </div>
+
+    <!-- Content Box -->
+    <div class="content-box">
+        <h1>Hi, I am Keta Hemanth Kumar</h1>
+        <p>From Master of Computer Applications (2023-2025) of Vignan's Institute of Information Technology</p>
+        <p>This is my final year project:</p>
+        <h2>Sign Language to Text Converter</h2>
+        <button onclick="location.href='/home'">View Project</button>
+    </div>
+</body>
+</html>
