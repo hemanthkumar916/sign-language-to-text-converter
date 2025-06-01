@@ -1,17 +1,17 @@
 # 🤟 Sign Language to Text Converter
 
-This project converts American Sign Language (ASL) gestures into readable text using deep learning and computer vision techniques. It is built using TensorFlow, OpenCV, and Flask and supports both real-time webcam detection and image uploads.
+This project converts American Sign Language (ASL) gestures into readable text using deep learning and computer vision techniques. It is built using TensorFlow, OpenCV, and Flask, and supports both real-time webcam detection and static image uploads.
 
 ---
 
 ## 🧠 Project Highlights
 
-- 🎯 **Real-time Sign Detection** via webcam
-- 🖼️ **Static Image Gesture Recognition**
-- 🌐 **Multilingual Support**: English, Hindi, Telugu
-- ⚡ **Built with TensorFlow's Object Detection API (SSD MobileNet V2)**
-- 🧩 **User-friendly Flask Web Interface**
-- 📦 **Offline Capable** – No internet needed once set up
+- 🎯 Real-time sign detection via webcam
+- 🖼️ Static image gesture recognition
+- 🌐 Multilingual support: English, Hindi, Telugu
+- ⚡ Built with TensorFlow's Object Detection API (SSD MobileNet V2)
+- 🧩 User-friendly Flask web interface
+- 📦 Offline Capable – No internet needed after setup
 
 ---
 
@@ -36,37 +36,53 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Visit `http://localhost:5000` in your browser.
+Open your browser and go to `http://localhost:5000`
 
 ---
 
-## 🖼️ Supported Gestures
+## 🖼️ Application Screenshots
 
-- `hello`, `yes`, `no`, `thanks`, `i love you`, `help`, `together`, `good luck`, `good`, `please`, `hope`, `danger`
+### 🔹 Web Interface (Home Page)
+![Home](assets/Screenshot_2025-04-29_190014.png)
+
+### 🔹 Image Detection - Before & After
+![Image Input](assets/Screenshot_2025-04-29_190032.png)
+![Image Output](assets/Screenshot_2025-04-29_190100.png)
+
+### 🔹 Real-Time Video Detection
+![Video Detection](assets/Screenshot_2025-04-29_191719.png)
+![Video Detection Idle](assets/Screenshot_2025-04-29_185927.png)
+
+### 🔹 Intro Page
+![Intro Page](assets/Screenshot_2025-04-29_185910.png)
 
 ---
 
 ## 📁 Project Structure
 
 ```
-├── app.py                    # Flask web app
-├── train.py                 # Model training script
-├── Tensorflow/              # Contains model config and checkpoints
-├── templates/               # HTML files for web interface
-├── static/                  # CSS, JS, etc.
+├── app.py                    # Flask app
+├── train.py                 # Training script
+├── Tensorflow/              # Model files and configs
+├── templates/               # HTML templates
+├── static/                  # CSS/JS files
+├── assets/                  # Demo images for GitHub display
 ├── requirements.txt         # Python dependencies
+├── .gitignore
+├── LICENSE
 └── README.md
 ```
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## 🧑‍💻 Author
 
 **Keta Hemanth Kumar**  
-MCA Graduate, Vignan’s Institute of Information Technology
-
----
-
-## 📜 License
-
-This project is for educational and academic use.
+MCA (2023–2025), Vignan’s Institute of Information Technology  
+Final Year Project: Sign Language to Text Converter
