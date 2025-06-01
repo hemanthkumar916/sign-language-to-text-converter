@@ -42,19 +42,19 @@ Open your browser and go to `http://localhost:5000`
 
 ## 🖼️ Application Screenshots
 
-### 🔹 Web Interface (Home Page)
-![Home](assets/Screenshot_2025-04-29_190014.png)
+### 🔹 Web Interface (Home Page)  
+<img src="assets/Screenshot_2025-04-29_190014.png" alt="Home" width="600" />
 
-### 🔹 Image Detection - Before & After
-![Image Input](assets/Screenshot_2025-04-29_190032.png)
-![Image Output](assets/Screenshot_2025-04-29_190100.png)
+### 🔹 Image Detection - Before & After  
+<img src="assets/Screenshot_2025-04-29_190032.png" alt="Image Input" width="600" />  
+<img src="assets/Screenshot_2025-04-29_190100.png" alt="Image Output" width="600" />
 
-### 🔹 Real-Time Video Detection
-![Video Detection](assets/Screenshot_2025-04-29_191719.png)
-![Video Detection Idle](assets/Screenshot_2025-04-29_185927.png)
+### 🔹 Real-Time Video Detection  
+<img src="assets/Screenshot_2025-04-29_191719.png" alt="Video Detection" width="600" />  
+<img src="assets/Screenshot_2025-04-29_185927.png" alt="Video Detection Idle" width="600" />
 
-### 🔹 Intro Page
-![Intro Page](assets/Screenshot_2025-04-29_185910.png)
+### 🔹 Intro Page  
+<img src="assets/Screenshot_2025-04-29_185910.png" alt="Intro Page" width="600" />
 
 ---
 
@@ -62,12 +62,12 @@ Open your browser and go to `http://localhost:5000`
 
 ```
 ├── app.py                    # Flask app
-├── train.py                 # Training script
-├── Tensorflow/              # Model files and configs
-├── templates/               # HTML templates
-├── static/                  # CSS/JS files
-├── assets/                  # Demo images for GitHub display
-├── requirements.txt         # Python dependencies
+├── train.py                  # Training script
+├── Tensorflow/               # Model files and configs
+├── templates/                # HTML templates
+├── static/                   # CSS/JS files
+├── assets/                   # Demo images for GitHub display
+├── requirements.txt          # Python dependencies
 ├── .gitignore
 ├── LICENSE
 └── README.md
