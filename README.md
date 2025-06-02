@@ -43,18 +43,18 @@ Open your browser and go to `http://localhost:5000`
 ## 🖼️ Application Screenshots
 
 ### 🔹 Web Interface (Home Page)  
-<img src="https://github.com/hemanthkumar916/sign-language-to-text-converter/raw/main/assets/Screenshot_2025-04-29 190014.png" alt="Home" width="600" />
+<img src="https://github.com/hemanthkumar916/sign-language-to-text-converter/raw/main/assets/Screenshot 2025-04-29 190014.png" alt="Home" width="600" />
 
 ### 🔹 Image Detection - Before & After  
-<img src="https://github.com/hemanthkumar916/sign-language-to-text-converter/raw/main/assets/Screenshot_2025-04-29 190032.png" alt="Image Input" width="600" />  
-<img src="https://github.com/hemanthkumar916/sign-language-to-text-converter/raw/main/assets/Screenshot_2025-04-29 190100.png" alt="Image Output" width="600" />
+<img src="https://github.com/hemanthkumar916/sign-language-to-text-converter/raw/main/assets/Screenshot 2025-04-29 190032.png" alt="Image Input" width="600" />  
+<img src="https://github.com/hemanthkumar916/sign-language-to-text-converter/raw/main/assets/Screenshot 2025-04-29 190100.png" alt="Image Output" width="600" />
 
 ### 🔹 Real-Time Video Detection  
-<img src="https://github.com/hemanthkumar916/sign-language-to-text-converter/raw/main/assets/Screenshot_2025-04-29 191719.png" alt="Video Detection" width="600" />  
-<img src="https://github.com/hemanthkumar916/sign-language-to-text-converter/raw/main/assets/Screenshot_2025-04-29 185927.png" alt="Video Detection Idle" width="600" />
+<img src="https://github.com/hemanthkumar916/sign-language-to-text-converter/raw/main/assets/Screenshot 2025-04-29 191719.png" alt="Video Detection" width="600" />  
+<img src="https://github.com/hemanthkumar916/sign-language-to-text-converter/raw/main/assets/Screenshot 2025-04-29 185927.png" alt="Video Detection Idle" width="600" />
 
 ### 🔹 Intro Page  
-<img src="https://github.com/hemanthkumar916/sign-language-to-text-converter/raw/main/assets/Screenshot_2025-04-29 185910.png" alt="Intro Page" width="600" />
+<img src="https://github.com/hemanthkumar916/sign-language-to-text-converter/raw/main/assets/Screenshot 2025-04-29 185910.png" alt="Intro Page" width="600" />
 
 ---
 
